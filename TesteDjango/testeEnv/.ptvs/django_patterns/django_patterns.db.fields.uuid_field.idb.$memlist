@@ -1,0 +1,6 @@
+SubfieldBase
+CharField
+psycopg2
+uuid
+UUIDField
+UUIDVersionError

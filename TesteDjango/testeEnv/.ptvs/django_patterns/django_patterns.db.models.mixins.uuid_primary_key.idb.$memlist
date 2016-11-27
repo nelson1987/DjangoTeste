@@ -1,0 +1,5 @@
+django
+Property
+UUIDField
+_
+UUIDPrimaryKeyMixin
