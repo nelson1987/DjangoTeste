@@ -1,4 +1,4 @@
-"""
+﻿"""
 Definition of urls for TesteDjango.
 """
 
@@ -18,19 +18,7 @@ urlpatterns = [
     url(r'^$', views.home, name="home"),
     url(r'^detail/(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
     url(r'^contact$', views.contact, name="contact"),
-    url(r'^about', views.about, name='about'),
-    #url(r'^login/$',
-    #    auth.views.login,
-    #    {
-    #        'template_name': 'app/login.html',
-    #        'authentication_form': BootstrapAuthenticationForm,
-    #        'extra_context':
-    #        {
-    #            'title':'Log in',
-    #            'year':datetime.now().year,
-    #        }
-    #    },
-    #    name='login'),
+    url(r'^about', views.about, name='about')
 ]
 
 #urlpatterns = patterns('',

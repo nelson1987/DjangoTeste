@@ -1,7 +1,7 @@
-db
+templatetags
 VERSION
 management
-templatetags
+db
 get_version
 models
 middleware

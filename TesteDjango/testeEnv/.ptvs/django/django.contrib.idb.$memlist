@@ -1,11 +1,11 @@
-flatpages
 messages
 contenttypes
+syndication
 sitemaps
 sites
 postgres
 staticfiles
-syndication
+flatpages
 auth
 humanize
 admindocs
