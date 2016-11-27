@@ -1,7 +1,7 @@
 retrying
 colorama
 requests
-html5lib
+progress
 pkg_resources
 os
 ipaddress
@@ -9,8 +9,8 @@ six
 distlib
 WHEEL_DIR
 absolute_import
-progress
 glob
+html5lib
 _markerlib
 DEBUNDLED
 cachecontrol
