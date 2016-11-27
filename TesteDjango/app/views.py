@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import *
 from django.template import loader
 from datetime import datetime
+import motor.motor_tornado
 
 def index(request):
     output = ""
@@ -13,11 +14,23 @@ def index(request):
 
 def home(request):
     """Renders the home page."""
+    client = motor.motor_tornado.MotorClient('mongodb://appharbor_c5d7wkq2:his526rhtr0i2tttfagho6quk@ds111718.mlab.com:11718/appharbor_c5d7wkq2')
+    db = client['test_database']
+    #while row:
+    #    print str(row[0]) + " " + str(row[1]) + " " + str(row[2])   
+    #    row = cursor.fetchone()
+    tabela = []
+    cursor = db.usuarios().find({'i': {'$lt': 5}})
+    while (yield cursor.fetch_next):
+        document = cursor.next_object()
+        tabela.append(document)
+
     context_dict = {
         'title':'Home Page', 
         'year': datetime.now().year,                   
         'message':'Your application description page.',
-        'boldmessage': "I am bold font from the context"
+        'boldmessage': "I am bold font from the context",
+        'table': tabela
         }
     assert isinstance(request, HttpRequest)
     return render(request, 'app\index.html', context = context_dict)
